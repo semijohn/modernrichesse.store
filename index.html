@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Richesse Dashboard</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; display:flex; min-height:100vh; background:#f5f5f7; }
+
+    /* Sidebar */
+    .sidebar {
+      width: 90px;
+      background: #111827;
+      color: white;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding-top:20px;
+      position:fixed;
+      height:100%;
+      transition: width 0.3s;
+    }
+    .sidebar:hover { width: 220px; }
+    .sidebar .logo { font-size:22px; font-weight:700; margin-bottom:40px; white-space:nowrap; }
+    .sidebar a {
+      display:flex;
+      align-items:center;
+      color:#cbd5e1;
+      text-decoration:none;
+      padding:15px 20px;
+      width:100%;
+      border-radius:8px;
+      margin-bottom:10px;
+      transition:0.3s;
+      overflow:hidden;
+    }
+    .sidebar a:hover { background:#1f2937; color:#fff; }
+    .sidebar a i { font-size:22px; min-width:30px; text-align:center; }
+    .sidebar span { margin-left:10px; opacity:0; transition:0.3s; white-space:nowrap; font-weight:500; }
+    .sidebar:hover span { opacity:1; }
+
+    /* Main content */
+    .main { margin-left:90px; padding:20px; width:100%; transition: margin-left 0.3s; }
+    .sidebar:hover ~ .main { margin-left:220px; }
+
+    .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:30px; }
+    .header h1 { font-size:28px; color:#111827; }
+    .header input { padding:8px 15px; border-radius:8px; border:1px solid #ccc; width:220px; }
+
+    .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+
+    .card {
+      background:white;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+      transition:transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.1); }
+
+    .card h3 { margin-bottom:10px; font-size:18px; color:#111827; }
+    .card p { font-size:14px; color:#6b7280; }
+
+    footer { text-align:center; margin-top:30px; color:#9ca3af; font-size:14px; }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .sidebar { width:60px; }
+      .sidebar:hover { width:200px; }
+      .main { margin-left:60px; }
+      .sidebar:hover ~ .main { margin-left:200px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="logo">Richesse</div>
+  <a href="#"><i class="material-icons">dashboard</i><span>Dashboard</span></a>
+  <a href="#"><i class="material-icons">analytics</i><span>Analytics</span></a>
+  <a href="#"><i class="material-icons">assignment</i><span>Projects</span></a>
+  <a href="#"><i class="material-icons">people</i><span>Clients</span></a>
+  <a href="#"><i class="material-icons">settings</i><span>Settings</span></a>
+  <a href="#"><i class="material-icons">logout</i><span>Logout</span></a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+  <div class="header">
+    <h1>Welcome to Modern Richesse</h1>
+    <input type="search" placeholder="Search...">
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Projects</h3>
+      <p><a href="http://565758.shop/">shop</a>
+<a href="http://565759.shop/">shop</a>
+<a href="http://565760.shop/">shop</a>
+<a href=""></a>
+<a href=""></a>
+<a href=""></a>
+<a href=""></a></p>
+    </div>
+
+    <div class="card">
+      <h3>Active Clients</h3>
+      <p>15 clients currently active</p>
+    </div>
+
+    <div class="card">
+      <h3>Revenue</h3>
+      <p>$32,400 earned this month</p>
+    </div>
+
+    <div class="card">
+      <h3>Pending Tasks</h3>
+      <p>6 tasks awaiting review</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 modernrichesse.store
+  </footer>
+</div>
+
+</body>
+</html>
